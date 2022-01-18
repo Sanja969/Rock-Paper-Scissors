@@ -1,0 +1,39 @@
+*{
+    text-align: center;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    color:rgb(10, 77, 46);
+}
+body{
+    background-image: url("Images/RockPaperScissors.png");
+    margin:0px;
+    align-items: center;
+    display: flex;
+}
+.content{
+    flex:1 1 auto;
+    display: flex;
+    flex-direction: column;
+   
+    height: 100%;
+  
+    
+}
+.content .a{
+    flex:1;
+   
+    
+    
+    background-color: rgb(10, 77, 46,0.5);
+}
+.content .b{
+   
+    flex:2;
+    background-color: rgba(73, 77, 10, 0.5);
+    
+}
+
+img{
+    width:140px;
+    height: 140px;
+    margin: 20px;
+}
