@@ -1,65 +1,66 @@
+"use strict";
+var playerScore = 0;
+var computerScore = 0;
 
 
-
-
-function computerSelection()
-{
-   let random= Math.floor(Math.random()*9)+1;
-   if(random<=3){
-       return "Rock";
-   }
-   else if(random>3 && random <=6){
-       return "Paper";
-   }
-   else{
-    return "Scissors";
-   }
-}
-
-function playerSelection(playerSel){
-    console.log("You Selected "+playerSel);
-    console.log("Computer Selected "+computerSelection());
-return playerSel;
-}
-
-
-
-
-function RockPaperScissors(playerPlay){
+function computerSelection() {
     
-   
-    if((computerPlay=="Rock"&&playerPlay=="Scissors") || (computerPlay=="Scissors"&&playerPlay=="Paper") || (computerPlay=="Paper"&&playerPlay=="Rock"))
-    {
-        console.log("You Lose!"+computerPlay+ " beats " + playerPlay);
-    }
-    else if(playerPlay==computerPlay){
-        console.log("No one wins!"+"There are two " + computerPlay);
-    }
-    else{
-        console.log("You win!"+playerPlay+ " beats " + computerPlay);
-    }
+  let random = Math.floor(Math.random() * 9) + 1;
+  if (random <= 3) {
+    return "Rock";
+  } else if (random > 3 && random <= 6) {
+    return "Paper";
+  } else {
+    return "Scissors";
+  }
+}
+
+function playerSelection(playerSel) {
+    RockPaperScissors(playerSel);
+    return playerSel;
+}
+
+function RockPaperScissors(playerPlay) {
+    
+    let computerPlay = computerSelection();
+    document.querySelector(".computerSelection").textContent = computerPlay;
+    document.querySelector(".playerSelection").textContent = playerPlay;
+    
+  if (
+    (computerPlay == "Rock" && playerPlay == "Scissors") ||
+    (computerPlay == "Scissors" && playerPlay == "Paper") ||
+    (computerPlay == "Paper" && playerPlay == "Rock")
+
+  ) {
+    
+    computerScore++;
+    document.querySelector(".computerScore").textContent = computerScore;
+    document.querySelector(".result").textContent ="Computer got the score!" + computerPlay + " beats " + playerPlay;
+  }
+  
+  else if (playerPlay == computerPlay) {
+    console.log("No one wins!" + "There are two " + computerPlay);
+  }
+  
+  else {
+    console.log("You win!" + playerPlay + " beats " + computerPlay);
+    playerScore++;
+    document.querySelector(".playerScore").textContent = playerScore;
+    document.querySelector(".result").textContent ="You got the score!" + computerPlay + " beats " + playerPlay;
+    
+  }
+  if(playerScore==5){
+    
+    document.querySelector("body").style.backgroundImage = "url('Images/giphy.gif')";
+    document.querySelector("main").style.display='none';
+    
+  }
+  if (computerScore == 5) {
+    document.querySelector("body").style.backgroundImage ="url('Images/lost.gif')";
+    document.querySelector("main").style.display = "none";
+    
+    
+  }
 }
 
 
-
-function game(){
-    i=0;
-    while(i<5){
-        i++;
-        
-        RockPaperScissors(playerSelection());
-        
-    }
-}
-
-//game();
-
-//let playerInput=prompt("Choose one of the items: Rock, Paper, Scissors. Write down one of these");
-//let playerSelectionParsed=playerInput.charAt(0).toUpperCase()+playerInput.slice(1).toLowerCase();
-const container = document.querySelector('#container');
-
-const content = document.createElement('div');
-content.classList.add('content');
-content.textContent = 'This is the glorious text-content!';
-
-container.appendChild(content);

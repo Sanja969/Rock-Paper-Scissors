@@ -4,31 +4,51 @@
   <meta charset="UTF-8"/>
   <script src="script.js"></script>
   <link rel="stylesheet" href="style.css">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="content">
-        <div class="a">
+    
+        <header>
             <h1>Rock Paper Scissors</h1>
             <h2>Let's play with computer this old school game</h2>
-        </div>
-        <div class="b">
-            <p>"Let's choose one of the items"</p>
-            <button type="button" onclick="playerSelection('Rock')"><img src="Images/rock.png"></button>
-            <button type="button" onclick="playerSelection('Paper')"><img src="Images/paper.png"></button>
-            <button type="button"  onclick="playerSelection('Scissors')"><img src="Images/scissors.png"></button>
-        </div>
+        </header>
+        <main>
+            
+            <div class='top'>
+                <p>"Choose one of the items"</p>
+                <button type="button" class="btn items" onclick="playerSelection('Rock')"><img src="Images/rock.png"></button>
+                <button type="button" class="btn items"onclick="playerSelection('Paper')"><img src="Images/paper.png"></button>
+                <button type="button" class="btn items"onclick="playerSelection('Scissors')"><img src="Images/scissors.png"></button>
+            </div>
+
+            <div class='selection'>
+                <section class="left">
+                    <p class='name-score'>Player</p>
+                    <p class="label-selection">Selection: <span class="playerSelection"></span></p>  
+                    <p class="label-score">Score: <span class="playerScore">0</span></p>
+                </section>
+
+                <section class="right">
+                    <p class='name-score'>Computer</p>
+                    <p class="label-selection">Selection: <span class="computerSelection"></span></p>  
+                    <p class="label-score">Score: <span class="computerScore">0</span></p>
+                </section>
+                
+            </div>
+            <div class="bottom">
+                <p class="result">Go ahead!</p>
+            </div>
+        </main>
         
         
-    </div>
+   
  
-    <div id="container"></div>
+    
 
 
-
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,39 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+
 *{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
     text-align: center;
-    font-family: 'Mochiy Pop P One', sans-serif;
-    color:rgb(10, 77, 46);
-}
-body{
-    background-image: url("Images/RockPaperScissors.png");
-    margin:0px;
-    align-items: center;
-    display: flex;
-}
-.content{
-    flex:1 1 auto;
-    display: flex;
-    flex-direction: column;
-   
-    height: 100%;
-  
-    
-}
-.content .a{
-    flex:1;
-   
-    
-    
-    background-color: rgb(10, 77, 46,0.5);
-}
-.content .b{
-   
-    flex:2;
-    background-color: rgba(73, 77, 10, 0.5);
-    
 }
 
+
+html {
+  font-size: 122.5%;
+  box-sizing: border-box;
+}
+body{
+    position: relative;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    color: #eee;
+    background-image: url("Images/RockPaperScissors.png");
+    
+    background-color: rgb(42, 47, 51);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+header{
+    
+   position:sticky;
+   height: 200px;
+   background-color: rgba(38, 86, 163, 0.5);
+   padding:50px;
+
+}
+
+main{
+    
+    padding-top: 50px;
+    font-size:30px;
+    height:100%;
+}
+.top{
+    height: 300px;
+}
+
+button{
+    margin: 40px;
+    border-radius: 10px;
+    padding:10px;
+    background-color: rgb(53, 112, 167);
+}
+button:hover{
+     background-color: rgb(139, 184, 226);
+}
 img{
-    width:140px;
-    height: 140px;
-    margin: 20px;
+    width:200px;
+    height: 200px;
+    
+}
+.selection{
+    padding: 50px 200px;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    
+    
+}
+.left, .right{
+    border-left: 3px solid black;
+    padding:10px;
+
+}
+.name-score{
+text-align: left;
+color:blue;
+
+}
+.label-score{
+text-align: left;
+}
+.bottom{
+    
+    
+    display: inline-block;
+    background-color:rgba(38, 86, 163, 0.5);
+    height: 100px;
+    width: 900px;
+    margin-top: 0px;
+    border-radius: 10px;
+    padding: 20px;
 }
