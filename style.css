@@ -14,7 +14,7 @@ html {
   box-sizing: border-box;
 }
 body{
-    position: relative;
+  
     font-family: 'Mochiy Pop P One', sans-serif;
     color: #eee;
     background-image: url("Images/RockPaperScissors.png");
@@ -23,6 +23,8 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    
+    
 }
 
 header{
@@ -33,6 +35,7 @@ header{
    padding:50px;
 
 }
+
 
 main{
     
@@ -59,7 +62,7 @@ img{
     
 }
 .selection{
-    padding: 50px 200px;
+    padding: 50px 100px;
     display:flex;
     align-items: center;
     justify-content: space-around;
@@ -89,4 +92,16 @@ text-align: left;
     margin-top: 0px;
     border-radius: 10px;
     padding: 20px;
+}
+.again{
+    
+
+    top:300px;
+    display:none;
+    width: 200px;
+    height: 100px;
+    font-size: 20px;
+    font-family: 'Mochiy Pop P One', sans-serif;
+    color: #eee;
+    
 }
