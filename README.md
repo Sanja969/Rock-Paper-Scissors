@@ -8,7 +8,7 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://sanja969.github.io/TicTacToe/)
+[Live Demo Link](https://sanja969.github.io/Rock-Paper-Scissors/)
 
 
 ## Authors
